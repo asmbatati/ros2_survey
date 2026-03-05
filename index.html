@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ROS 2 in a Nutshell: A Survey - A comprehensive survey of the Robot Operating System 2 ecosystem covering 8,200+ publications.">
+        content="ROS 2 in a Nutshell: A Survey - A comprehensive survey of the Robot Operating System 2 ecosystem covering 8,000+ publications.">
   <meta name="keywords" content="ROS 2, Robot Operating System, Robotics, Survey, DDS, Real-Time, Middleware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ROS 2 in a Nutshell: A Survey</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ROS 2 in a Nutshell: A Survey">
+  <meta property="og:description" content="Comprehensive survey of ROS 2 covering 8,000+ publications, 176 packages, and a curated research database.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asmbatati.github.io/awesome-ros/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ROS 2 in a Nutshell: A Survey">
+  <meta name="twitter:description" content="Comprehensive survey of ROS 2 covering 8,000+ publications and a curated research database.">
+  <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -141,12 +151,20 @@
                   <span>Database</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+              <span class="link-block">
+                <a href="https://github.com/asmbatati/awesome-ros"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
+                  <span>Dataset Repo</span>
                 </a>
-              </span> -->
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/asmbatati/awesome-ros/blob/main/CONTRIBUTING.md"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                  <span>Contribute</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -162,13 +180,13 @@
       <div class="columns is-centered is-multiline">
         <div class="column is-3">
           <div class="stat-card blue">
-            <div class="stat-number">8,255</div>
+            <div class="stat-number">8,033</div>
             <div class="stat-label">Papers Surveyed</div>
           </div>
         </div>
         <div class="column is-3">
           <div class="stat-card green">
-            <div class="stat-number">1,002</div>
+            <div class="stat-number">960</div>
             <div class="stat-label">ROS 2 Publications</div>
           </div>
         </div>
@@ -270,7 +288,7 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Database Insights</h2>
     <p class="has-text-centered" style="margin-bottom:1.5rem;">
-      Quantitative analysis from our curated database of 8,255 ROS publications.
+      Quantitative analysis from our curated database of 8,033 ROS publications.
     </p>
 
     <div class="columns is-centered">
@@ -320,6 +338,15 @@
         </div>
       </div>
     </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="figure-container">
+          <img src="./static/images/subdomains.png" alt="Research Subdomains">
+          <p class="figure-caption">ROS 2 research subdomain distribution across the taxonomy.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -330,11 +357,12 @@
     <h2 class="title is-3 has-text-centered">Key Findings</h2>
     <div class="content has-text-justified">
       <ul>
-        <li><strong>ROS 2 adoption is accelerating:</strong> ROS 2 distributions collectively account for nearly half of all ROS downloads since 2023, with over 1,000 ROS 2-focused publications indexed in our database.</li>
+        <li><strong>ROS 2 adoption is accelerating:</strong> ROS 2 distributions collectively account for nearly half of all ROS downloads since 2023, with 960 ROS 2-focused publications indexed in our database of 8,033 papers.</li>
         <li><strong>Real-time remains an open frontier:</strong> While executors, QoS policies, and PREEMPT_RT integration improve predictability, end-to-end determinism depends on OS configuration, DDS vendor, and executor design. SROS2 adds 0.5&ndash;2 ms per hop.</li>
         <li><strong>The readiness paradox:</strong> ROS 2's architecture surpasses ROS 1, but DDS discovery storms, vendor-specific QoS semantics, and multicast tuning difficulties mean deployment complexity persists. Zenoh (Tier-1 RMW since Jazzy) reduces discovery overhead by 97&ndash;99%.</li>
         <li><strong>Safety-critical domains are underrepresented:</strong> Navigation/SLAM (~28%) and manipulation (~18%) dominate, while surgical robotics and aerospace account for &lt;5% combined.</li>
         <li><strong>Ecosystem growth:</strong> 176 curated community packages span perception, planning, control, simulation, and fleet management.</li>
+        <li><strong>Community-maintained dataset:</strong> The full dataset is publicly available on <a href="https://github.com/asmbatati/awesome-ros" style="color:#2196F3;">GitHub</a> under CC-BY-4.0, welcoming community contributions.</li>
       </ul>
     </div>
   </div>
@@ -358,11 +386,14 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="#">
+      <a class="icon-link" href="https://www.preprints.org/manuscript/202410.1204">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="https://ric.psu.edu.sa/riotu/ros/">
         <i class="fas fa-database"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/asmbatati/awesome-ros">
+        <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
