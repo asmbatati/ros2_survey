@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="ROS 2 in a Nutshell: A Survey - A comprehensive survey of the Robot Operating System 2 ecosystem covering 8,000+ publications.">
+    content="ROS 2 in a Nutshell: A Survey - A comprehensive survey of the Robot Operating System 2 ecosystem covering 8,000+ publications.">
   <meta name="keywords" content="ROS 2, Robot Operating System, Robotics, Survey, DDS, Real-Time, Middleware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ROS 2 in a Nutshell: A Survey</title>
 
   <!-- Open Graph -->
   <meta property="og:title" content="ROS 2 in a Nutshell: A Survey">
-  <meta property="og:description" content="Comprehensive survey of ROS 2 covering 8,000+ publications, 176 packages, and a curated research database.">
+  <meta property="og:description"
+    content="Comprehensive survey of ROS 2 covering 8,000+ publications, 176 packages, and a curated research database.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://asmbatati.github.io/awesome-ros/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ROS 2 in a Nutshell: A Survey">
-  <meta name="twitter:description" content="Comprehensive survey of ROS 2 covering 8,000+ publications and a curated research database.">
+  <meta name="twitter:description"
+    content="Comprehensive survey of ROS 2 covering 8,000+ publications and a curated research database.">
   <link rel="icon" type="image/svg+xml" href="./static/images/favicon.svg">
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -43,15 +44,51 @@
       text-align: center;
       margin: 0.5rem;
     }
-    .stat-card .stat-number { font-size: 2.5rem; font-weight: 700; }
-    .stat-card .stat-label { font-size: 0.95rem; opacity: 0.9; }
-    .stat-card.blue { background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%); }
-    .stat-card.green { background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); }
-    .stat-card.orange { background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%); }
-    .stat-card.teal { background: linear-gradient(135deg, #009688 0%, #00796B 100%); }
-    .figure-container { margin: 1.5rem 0; text-align: center; }
-    .figure-container img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
-    .figure-caption { font-size: 0.9rem; color: #666; margin-top: 0.5rem; font-style: italic; }
+
+    .stat-card .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .stat-card .stat-label {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .stat-card.blue {
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    }
+
+    .stat-card.green {
+      background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+    }
+
+    .stat-card.orange {
+      background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+    }
+
+    .stat-card.teal {
+      background: linear-gradient(135deg, #009688 0%, #00796B 100%);
+    }
+
+    .figure-container {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .figure-container img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .figure-caption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
     .rq-box {
       background: #f5f7ff;
       border-left: 4px solid #2196F3;
@@ -59,7 +96,11 @@
       margin: 0.75rem 0;
       border-radius: 0 8px 8px 0;
     }
-    .rq-box strong { color: #1976D2; }
+
+    .rq-box strong {
+      color: #1976D2;
+    }
+
     .pillar-tag {
       display: inline-block;
       padding: 0.3rem 0.8rem;
@@ -71,346 +112,369 @@
     }
   </style>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://ric.psu.edu.sa/riotu/ros/">
-      <span class="icon">
-          <i class="fas fa-database"></i>
-      </span>
-      <span>ROS Database</span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Resources
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://ros-database.vercel.app/">
+          <span class="icon">
+            <i class="fas fa-database"></i>
+          </span>
+          <span>ROS Database</span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://ric.psu.edu.sa/riotu/ros/">
-            ROS Database
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Resources
           </a>
-          <a class="navbar-item" href="https://ros.org">
-            ROS.org
-          </a>
-          <a class="navbar-item" href="https://docs.ros.org/en/jazzy/">
-            ROS 2 Jazzy Docs
-          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://ros-database.vercel.app/">
+              ROS Database
+            </a>
+            <a class="navbar-item" href="https://ros.org">
+              ROS.org
+            </a>
+            <a class="navbar-item" href="https://docs.ros.org/en/jazzy/">
+              ROS 2 Jazzy Docs
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">ROS 2 in a Nutshell: A Survey</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">Abdulrahman Al-Batati<sup>1</sup>,</span>
-            <span class="author-block">Anis Koubaa<sup>2</sup>,</span>
-            <span class="author-block">Mohamed Abdelkader<sup>1</sup>,</span>
-            <span class="author-block">Khaled Gabr<sup>1</sup>,</span>
-            <span class="author-block">Hamad Aloqaily<sup>1</sup></span>
-          </div>
-
-          <div class="is-size-6 publication-authors" style="margin-top:0.25rem;">
-            <span class="author-block"><sup>1</sup>Robotics and IoT Lab, Prince Sultan University &nbsp;&nbsp;
-            <sup>2</sup>College of CIS, Alfaisal University</span>
-          </div>
-
-          <div class="is-size-6 publication-authors" style="margin-top:0.5rem;">
-            <span class="author-block"><strong>ACM Computing Surveys</strong> (Under Review)</span>
-          </div>
-
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="https://www.preprints.org/manuscript/202410.1204" 
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://ric.psu.edu.sa/riotu/ros/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-database"></i></span>
-                  <span>Database</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/asmbatati/awesome-ros"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Dataset Repo</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/asmbatati/awesome-ros/blob/main/CONTRIBUTING.md"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-hands-helping"></i></span>
-                  <span>Contribute</span>
-                </a>
-              </span>
+            <h1 class="title is-1 publication-title">ROS 2 in a Nutshell: A Survey</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Abdulrahman Al-Batati<sup>1</sup>,</span>
+              <span class="author-block">Anis Koubaa<sup>2</sup>,</span>
+              <span class="author-block">Mohamed Abdelkader<sup>1</sup>,</span>
+              <span class="author-block">Khaled Gabr<sup>1</sup>,</span>
+              <span class="author-block">Hamad Aloqaily<sup>1</sup></span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top:0.25rem;">
+              <span class="author-block"><sup>1</sup>Robotics and IoT Lab, Prince Sultan University &nbsp;&nbsp;
+                <sup>2</sup>College of CIS, Alfaisal University</span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top:0.5rem;">
+              <span class="author-block"><strong>ACM Computing Surveys</strong> (Under Review)</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://www.preprints.org/manuscript/202410.1204"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://ros-database.vercel.app/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-database"></i></span>
+                    <span>Database</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/asmbatati/awesome-ros"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Dataset Repo</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/asmbatati/awesome-ros/blob/main/CONTRIBUTING.md"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-hands-helping"></i></span>
+                    <span>Contribute</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Key Statistics -->
-<section class="hero is-light is-small">
-  <div class="hero-body">
+  <!-- Key Statistics -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered is-multiline">
+          <div class="column is-3">
+            <div class="stat-card blue">
+              <div class="stat-number">8,033</div>
+              <div class="stat-label">Papers Surveyed</div>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="stat-card green">
+              <div class="stat-number">960</div>
+              <div class="stat-label">ROS 2 Publications</div>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="stat-card orange">
+              <div class="stat-number">176</div>
+              <div class="stat-label">Community Packages</div>
+            </div>
+          </div>
+          <div class="column is-3">
+            <div class="stat-card teal">
+              <div class="stat-number">2009&ndash;2025</div>
+              <div class="stat-label">Years Covered</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Abstract -->
+  <section class="section">
     <div class="container is-max-desktop">
-      <div class="columns is-centered is-multiline">
-        <div class="column is-3">
-          <div class="stat-card blue">
-            <div class="stat-number">8,033</div>
-            <div class="stat-label">Papers Surveyed</div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              The Robot Operating System (ROS) has been the de facto standard framework for
+              developing robotics applications since 2009. Its successor, ROS 2, addresses critical
+              limitations in reliability, real-time performance, security, and multi-robot scalability
+              through a fundamentally redesigned architecture built on the Data Distribution Service (DDS)
+              middleware.
+            </p>
+            <p>
+              This survey provides a comprehensive, multidimensional review of ROS 2 research,
+              guided by three research questions:
+            </p>
+            <div class="rq-box">
+              <strong>RQ1:</strong> How does ROS 2 improve upon ROS 1 in architecture, design goals, and features, and
+              what new limitations arise?
+            </div>
+            <div class="rq-box">
+              <strong>RQ2:</strong> What advances in ROS 2's technical foundations emerge from the literature, and how
+              are they deployed?
+            </div>
+            <div class="rq-box">
+              <strong>RQ3:</strong> What frameworks, libraries, and tools have emerged in the ROS 2 ecosystem, and which
+              areas remain underdeveloped?
+            </div>
+            <p style="margin-top:1rem;">
+              We analyze over 8,200 publications spanning 2009&ndash;2025, organizing advances into
+              four pillars: (1) middleware architectures, (2) real-time scheduling and hardware
+              acceleration, (3) security, privacy, and safety, and (4) multi-robot and distributed
+              coordination. The survey is accompanied by a curated, publicly accessible database of
+              ROS-related resources.
+            </p>
           </div>
         </div>
-        <div class="column is-3">
-          <div class="stat-card green">
-            <div class="stat-number">960</div>
-            <div class="stat-label">ROS 2 Publications</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Four Pillars -->
+  <section class="section" style="background:#f9fafb;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Four Research Pillars</h2>
+      <div class="columns is-centered is-multiline" style="margin-top:1rem;">
+        <div class="column is-6">
+          <div class="box">
+            <h3 class="title is-5"><span class="pillar-tag" style="background:#2196F3;">1</span> Middleware
+              Architectures</h3>
+            <p>DDS-based communication, RMW abstraction layers, QoS policies, Zenoh as a post-DDS alternative, and the
+              "readiness paradox" of operational complexity vs. architectural sophistication.</p>
           </div>
         </div>
-        <div class="column is-3">
-          <div class="stat-card orange">
-            <div class="stat-number">176</div>
-            <div class="stat-label">Community Packages</div>
+        <div class="column is-6">
+          <div class="box">
+            <h3 class="title is-5"><span class="pillar-tag" style="background:#4CAF50;">2</span> Real-Time & Hardware
+              Acceleration</h3>
+            <p>Executor models, PREEMPT_RT integration, response-time analysis, micro-ROS for MCUs, FPGA/GPU
+              acceleration, and cross-layer scheduling frameworks.</p>
           </div>
         </div>
-        <div class="column is-3">
-          <div class="stat-card teal">
-            <div class="stat-number">2009&ndash;2025</div>
-            <div class="stat-label">Years Covered</div>
+        <div class="column is-6">
+          <div class="box">
+            <h3 class="title is-5"><span class="pillar-tag" style="background:#FF9800;">3</span> Security, Privacy &
+              Safety</h3>
+            <p>SROS2 overhead benchmarks, DDS Security, intrusion detection, privacy-aware data flow, mixed-criticality
+              scheduling, and formal verification.</p>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="box">
+            <h3 class="title is-5"><span class="pillar-tag" style="background:#E91E63;">4</span> Multi-Robot &
+              Distributed Systems</h3>
+            <p>Fleet management (Open-RMF), DDS discovery in large networks, edge/cloud offloading, heterogeneous
+              coordination, and scalability challenges.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Abstract -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            The Robot Operating System (ROS) has been the de facto standard framework for
-            developing robotics applications since 2009. Its successor, ROS 2, addresses critical
-            limitations in reliability, real-time performance, security, and multi-robot scalability
-            through a fundamentally redesigned architecture built on the Data Distribution Service (DDS)
-            middleware.
-          </p>
-          <p>
-            This survey provides a comprehensive, multidimensional review of ROS 2 research,
-            guided by three research questions:
-          </p>
-          <div class="rq-box">
-            <strong>RQ1:</strong> How does ROS 2 improve upon ROS 1 in architecture, design goals, and features, and what new limitations arise?
+  <!-- Database Insights -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Database Insights</h2>
+      <p class="has-text-centered" style="margin-bottom:1.5rem;">
+        Quantitative analysis from our curated database of 8,033 ROS publications.
+      </p>
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="figure-container">
+            <img src="./static/images/publication_growth.png" alt="Publication Growth">
+            <p class="figure-caption">Publication growth: ROS 1 vs ROS 2 (2009&ndash;2025). ROS 2 research has grown
+              steadily since 2017.</p>
           </div>
-          <div class="rq-box">
-            <strong>RQ2:</strong> What advances in ROS 2's technical foundations emerge from the literature, and how are they deployed?
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="figure-container">
+            <img src="./static/images/ros2_adoption.png" alt="ROS 2 Adoption">
+            <p class="figure-caption">ROS 2's share of all ROS publications over time.</p>
           </div>
-          <div class="rq-box">
-            <strong>RQ3:</strong> What frameworks, libraries, and tools have emerged in the ROS 2 ecosystem, and which areas remain underdeveloped?
+        </div>
+        <div class="column is-half">
+          <div class="figure-container">
+            <img src="./static/images/ros2_domains.png" alt="ROS 2 Research Domains">
+            <p class="figure-caption">Distribution of ROS 2 research across application domains.</p>
           </div>
-          <p style="margin-top:1rem;">
-            We analyze over 8,200 publications spanning 2009&ndash;2025, organizing advances into
-            four pillars: (1) middleware architectures, (2) real-time scheduling and hardware
-            acceleration, (3) security, privacy, and safety, and (4) multi-robot and distributed
-            coordination. The survey is accompanied by a curated, publicly accessible database of
-            ROS-related resources.
-          </p>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="figure-container">
+            <img src="./static/images/article_types.png" alt="Article Types">
+            <p class="figure-caption">ROS 2 article type distribution: Applications, Core, and Ecosystem.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="figure-container">
+            <img src="./static/images/publishers.png" alt="Top Publishers">
+            <p class="figure-caption">Top publishers of ROS 2 research.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="figure-container">
+            <img src="./static/images/pkg_categories.png" alt="Package Categories">
+            <p class="figure-caption">ROS 2 community packages categorized by robot stack and infrastructure type.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="figure-container">
+            <img src="./static/images/subdomains.png" alt="Research Subdomains">
+            <p class="figure-caption">ROS 2 research subdomain distribution across the taxonomy.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Four Pillars -->
-<section class="section" style="background:#f9fafb;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Four Research Pillars</h2>
-    <div class="columns is-centered is-multiline" style="margin-top:1rem;">
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-5"><span class="pillar-tag" style="background:#2196F3;">1</span> Middleware Architectures</h3>
-          <p>DDS-based communication, RMW abstraction layers, QoS policies, Zenoh as a post-DDS alternative, and the "readiness paradox" of operational complexity vs. architectural sophistication.</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-5"><span class="pillar-tag" style="background:#4CAF50;">2</span> Real-Time & Hardware Acceleration</h3>
-          <p>Executor models, PREEMPT_RT integration, response-time analysis, micro-ROS for MCUs, FPGA/GPU acceleration, and cross-layer scheduling frameworks.</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-5"><span class="pillar-tag" style="background:#FF9800;">3</span> Security, Privacy & Safety</h3>
-          <p>SROS2 overhead benchmarks, DDS Security, intrusion detection, privacy-aware data flow, mixed-criticality scheduling, and formal verification.</p>
-        </div>
-      </div>
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-5"><span class="pillar-tag" style="background:#E91E63;">4</span> Multi-Robot & Distributed Systems</h3>
-          <p>Fleet management (Open-RMF), DDS discovery in large networks, edge/cloud offloading, heterogeneous coordination, and scalability challenges.</p>
-        </div>
+  <!-- Key Findings -->
+  <section class="section" style="background:#f9fafb;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Key Findings</h2>
+      <div class="content has-text-justified">
+        <ul>
+          <li><strong>ROS 2 adoption is accelerating:</strong> ROS 2 distributions collectively account for nearly half
+            of all ROS downloads since 2023, with 960 ROS 2-focused publications indexed in our database of 8,033
+            papers.</li>
+          <li><strong>Real-time remains an open frontier:</strong> While executors, QoS policies, and PREEMPT_RT
+            integration improve predictability, end-to-end determinism depends on OS configuration, DDS vendor, and
+            executor design. SROS2 adds 0.5&ndash;2 ms per hop.</li>
+          <li><strong>The readiness paradox:</strong> ROS 2's architecture surpasses ROS 1, but DDS discovery storms,
+            vendor-specific QoS semantics, and multicast tuning difficulties mean deployment complexity persists. Zenoh
+            (Tier-1 RMW since Jazzy) reduces discovery overhead by 97&ndash;99%.</li>
+          <li><strong>Safety-critical domains are underrepresented:</strong> Navigation/SLAM (~28%) and manipulation
+            (~18%) dominate, while surgical robotics and aerospace account for &lt;5% combined.</li>
+          <li><strong>Ecosystem growth:</strong> 176 curated community packages span perception, planning, control,
+            simulation, and fleet management.</li>
+          <li><strong>Community-maintained dataset:</strong> The full dataset is publicly available on <a
+              href="https://github.com/asmbatati/awesome-ros" style="color:#2196F3;">GitHub</a> under CC-BY-4.0,
+            welcoming community contributions.</li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Database Insights -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Database Insights</h2>
-    <p class="has-text-centered" style="margin-bottom:1.5rem;">
-      Quantitative analysis from our curated database of 8,033 ROS publications.
-    </p>
-
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="figure-container">
-          <img src="./static/images/publication_growth.png" alt="Publication Growth">
-          <p class="figure-caption">Publication growth: ROS 1 vs ROS 2 (2009&ndash;2025). ROS 2 research has grown steadily since 2017.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="figure-container">
-          <img src="./static/images/ros2_adoption.png" alt="ROS 2 Adoption">
-          <p class="figure-caption">ROS 2's share of all ROS publications over time.</p>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="figure-container">
-          <img src="./static/images/ros2_domains.png" alt="ROS 2 Research Domains">
-          <p class="figure-caption">Distribution of ROS 2 research across application domains.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="figure-container">
-          <img src="./static/images/article_types.png" alt="Article Types">
-          <p class="figure-caption">ROS 2 article type distribution: Applications, Core, and Ecosystem.</p>
-        </div>
-      </div>
-      <div class="column is-half">
-        <div class="figure-container">
-          <img src="./static/images/publishers.png" alt="Top Publishers">
-          <p class="figure-caption">Top publishers of ROS 2 research.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="figure-container">
-          <img src="./static/images/pkg_categories.png" alt="Package Categories">
-          <p class="figure-caption">ROS 2 community packages categorized by robot stack and infrastructure type.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="figure-container">
-          <img src="./static/images/subdomains.png" alt="Research Subdomains">
-          <p class="figure-caption">ROS 2 research subdomain distribution across the taxonomy.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Key Findings -->
-<section class="section" style="background:#f9fafb;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Key Findings</h2>
-    <div class="content has-text-justified">
-      <ul>
-        <li><strong>ROS 2 adoption is accelerating:</strong> ROS 2 distributions collectively account for nearly half of all ROS downloads since 2023, with 960 ROS 2-focused publications indexed in our database of 8,033 papers.</li>
-        <li><strong>Real-time remains an open frontier:</strong> While executors, QoS policies, and PREEMPT_RT integration improve predictability, end-to-end determinism depends on OS configuration, DDS vendor, and executor design. SROS2 adds 0.5&ndash;2 ms per hop.</li>
-        <li><strong>The readiness paradox:</strong> ROS 2's architecture surpasses ROS 1, but DDS discovery storms, vendor-specific QoS semantics, and multicast tuning difficulties mean deployment complexity persists. Zenoh (Tier-1 RMW since Jazzy) reduces discovery overhead by 97&ndash;99%.</li>
-        <li><strong>Safety-critical domains are underrepresented:</strong> Navigation/SLAM (~28%) and manipulation (~18%) dominate, while surgical robotics and aerospace account for &lt;5% combined.</li>
-        <li><strong>Ecosystem growth:</strong> 176 curated community packages span perception, planning, control, simulation, and fleet management.</li>
-        <li><strong>Community-maintained dataset:</strong> The full dataset is publicly available on <a href="https://github.com/asmbatati/awesome-ros" style="color:#2196F3;">GitHub</a> under CC-BY-4.0, welcoming community contributions.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<!-- BibTeX -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{albatati2025ros2survey,
+  <!-- BibTeX -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{albatati2025ros2survey,
   author    = {Al-Batati, Abdulrahman and Koubaa, Anis and Abdelkader, Mohamed and Gabr, Khaled and Aloqaily, Hamad},
   title     = {ROS 2 in a Nutshell: A Survey},
   journal   = {Pending},
   year      = {2026},
 }</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="https://www.preprints.org/manuscript/202410.1204">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://ric.psu.edu.sa/riotu/ros/">
-        <i class="fas fa-database"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/asmbatati/awesome-ros">
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p>
-            RIOTU Lab, Prince Sultan University &mdash; Riyadh, Saudi Arabia
-          </p>
-          <p style="font-size:0.85rem; color:#999;">
-            Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
-            licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
-          </p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://www.preprints.org/manuscript/202410.1204">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://ros-database.vercel.app/">
+          <i class="fas fa-database"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/asmbatati/awesome-ros">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered">
+            <p>
+              RIOTU Lab, Prince Sultan University &mdash; Riyadh, Saudi Arabia
+            </p>
+            <p style="font-size:0.85rem; color:#999;">
+              Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+              licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
