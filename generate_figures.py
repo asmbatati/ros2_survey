@@ -27,13 +27,20 @@ ros1 = [r for r in rows if r.get("ROS Version", "").strip().upper() in ("ROS1", 
 ros2 = [r for r in rows if r.get("ROS Version", "").strip().upper() in ("ROS2", "ROS 2")]
 both = [r for r in rows if r.get("ROS Version", "").strip().upper() == "BOTH"]
 
-# Color palette
-BLUE = "#2196F3"
-GREEN = "#4CAF50"
-ORANGE = "#FF9800"
-TEAL = "#009688"
-PINK = "#E91E63"
-PURPLE = "#9C27B0"
+# Warm survey palette (matches the paper figures and the database website)
+BLUE = "#a78d72"      # clay  — ROS 1
+GREEN = "#c1272d"     # crimson — ROS 2 / primary accent
+ORANGE = "#cf6a4a"    # terracotta
+TEAL = "#dca54c"      # sand
+PINK = "#c97f93"      # rose
+PURPLE = "#8a2435"    # maroon
+
+DOMAIN_COLORS = {
+    "Planning & Control": "#8a2435",
+    "Perception & World Modeling": "#cf6a4a",
+    "Human & System Interaction": "#c97f93",
+    "Systems & Infrastructure": "#c3922e",
+}
 
 plt.rcParams.update({
     "font.family": "sans-serif",
@@ -46,7 +53,7 @@ plt.rcParams.update({
 # 1. Publication Growth (stacked bar)
 # ============================================================
 years = sorted(set(r.get("Year", "").strip() for r in rows if r.get("Year", "").strip().isdigit()))
-years = [y for y in years if 2009 <= int(y) <= 2025]
+years = [y for y in years if 2009 <= int(y) <= 2026]
 
 ros1_by_year = Counter(r["Year"].strip() for r in ros1 if r["Year"].strip() in years)
 ros2_by_year = Counter(r["Year"].strip() for r in ros2 if r["Year"].strip() in years)
@@ -62,7 +69,7 @@ ax.bar(x, r2_counts, bottom=r1_counts, label="ROS 2", color=GREEN, alpha=0.85)
 ax.set_xticks(x)
 ax.set_xticklabels(years, rotation=45, ha="right")
 ax.set_ylabel("Number of Publications")
-ax.set_title("ROS Publication Growth (2009–2025)", fontsize=16, fontweight="bold")
+ax.set_title(f"ROS Publication Growth ({years[0]}–{years[-1]})", fontsize=16, fontweight="bold")
 ax.legend()
 plt.tight_layout()
 fig.savefig(os.path.join(OUT, "publication_growth.png"), dpi=150, bbox_inches="tight")
@@ -95,7 +102,7 @@ ros2_all = ros2 + both
 domain_counts = Counter(r.get("Research_Domain", "").strip() for r in ros2_all if r.get("Research_Domain", "").strip())
 labels_d = list(domain_counts.keys())
 sizes_d = list(domain_counts.values())
-colors_d = [BLUE, GREEN, ORANGE, PINK][:len(labels_d)]
+colors_d = [DOMAIN_COLORS.get(l, "#a78d72") for l in labels_d]
 
 fig, ax = plt.subplots(figsize=(8, 8))
 wedges, texts, autotexts = ax.pie(
@@ -117,7 +124,7 @@ type_counts = Counter(r.get("Contribution_Type", "").strip() for r in ros2_all i
 type_labels = {"APP": "Application", "CORE": "Core ROS", "ECO": "Ecosystem"}
 labels_t = [type_labels.get(k, k) for k in type_counts.keys()]
 sizes_t = list(type_counts.values())
-colors_t = [BLUE, ORANGE, TEAL][:len(labels_t)]
+colors_t = [PURPLE, GREEN, ORANGE][:len(labels_t)]
 
 fig, ax = plt.subplots(figsize=(7, 7))
 ax.pie(sizes_t, labels=labels_t, autopct="%1.1f%%", startangle=90,
@@ -160,7 +167,12 @@ if os.path.exists(FW_SRC):
             break
     
     if cat_col:
-        cat_counts = Counter(r.get(cat_col, "").strip() for r in fw_rows if r.get(cat_col, "").strip())
+        cat_counts = Counter(
+            part.strip()
+            for r in fw_rows
+            for part in (r.get(cat_col) or "").split(";")
+            if part.strip()
+        )
         top_cats = cat_counts.most_common(15)
         cat_names = [c[0][:35] for c in reversed(top_cats)]
         cat_vals = [c[1] for c in reversed(top_cats)]
