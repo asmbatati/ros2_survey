@@ -13,8 +13,9 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import numpy as np
 
-SRC = r"c:\Users\asmbatati\Desktop\ros_survey_revision\data\ROS2 Related Works_v26.csv"
-FW_SRC = r"c:\Users\asmbatati\Desktop\ros_survey_revision\data\ros2pkgs.csv"
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "awesome-ros", "data")
+SRC = os.path.join(DATA_DIR, "papers.csv")
+FW_SRC = os.path.join(DATA_DIR, "frameworks.csv")
 OUT = os.path.join(os.path.dirname(__file__), "static", "images")
 os.makedirs(OUT, exist_ok=True)
 
