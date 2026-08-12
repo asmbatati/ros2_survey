@@ -9,7 +9,7 @@ Prince Sultan University — RIOTU Lab
 
 ## Links
 
-- **ROS Database:** [https://ric.psu.edu.sa/riotu/ros/](https://ric.psu.edu.sa/riotu/ros/)
+- **ROS Database:** [https://ros-database.vercel.app/](https://ros-database.vercel.app/)
 
 ## Citation
 
